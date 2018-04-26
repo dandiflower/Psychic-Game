@@ -4,11 +4,11 @@
     <meta charset="utf-8" /> 
     <title>Psychic Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
-    <script src="game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -33,9 +33,9 @@
 
 <h1>Guess what letter I'm thinking of?</h1>
 
-User Guess:
+<div class="userGuess">User Guess:
 <input type="text" name="guess">
-
+</div>
 
 
 <div class="row">
@@ -44,10 +44,12 @@ User Guess:
         
         <div class="column-md-2">
             <ul class="list-group">
+                <div id="Wins">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Wins!
-                    <span class="badge badge-primary badge-pill">2</span>
+                    <span class="badge badge-primary badge-pill"><span id="Wins"></span>
                 </li>
+                </div>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Losses..
                     <span class="badge badge-primary badge-pill">2</span>
@@ -65,35 +67,6 @@ User Guess:
 
     </div>
 </div>
-
-
-
-
-
-<style>
-
-h3 {
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-    margin-top: 5%;
-    width: 30%;
-}
-
-h1 {
-    margin-top: 5%;
-    text-align: center;
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-</style>
-
-
-
-
 
 </body>
 
