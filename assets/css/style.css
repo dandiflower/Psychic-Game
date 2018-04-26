@@ -5,11 +5,13 @@ h3 {
 
 .container {
     margin-top: 5%;
-    width: 30%;
+    width: 10%;
 }
 
 .userGuess {
     color: green;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h1 {
