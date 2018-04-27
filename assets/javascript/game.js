@@ -3,7 +3,7 @@
 // VARIABLES
 // ===========================================================
 
-var alphabet = ["a", "b"];
+var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 var wins = 0;
 
@@ -20,32 +20,29 @@ var computerLetter;
 // FUNCTIONS
 // =============================================================
 
-// // This function is run whenever the user presses a key.
-// document.onkeyup = function (event) {
-//     // Determines which key was pressed.
-//     var userGuess = event.key;
-//     userGuess = userGuess.toLowerCase();
-//     console.log("User Guess" + userGuess);
-// };
-
 // Function that updates the wins...
 function updateWins() {
-    document.getElementById("wins").innerHTML = "Wins: " + wins;
+    document.getElementById("wins").innerHTML = wins;
 }
 
 // // Function that updates the remaining guesses...
 function updateRemaining() {
-    document.getElementById("numLeft").innerHTML = "Guesses Left: " + numLeft;
+    document.getElementById("numLeft").innerHTML = numLeft;
 }
 
 // Function that updates the number of guesses made...
 function updateUsed() {
-    document.getElementById("numUsed").innerHTML = "Guesses Made: " + numUsed;
+    document.getElementById("numUsed").innerHTML = numUsed;
 }
 
 // Function that updates the losses...
 function updateLost() {
-    document.getElementById("lost").innerHTML = "Losses: " + lost;
+    document.getElementById("lost").innerHTML = lost;
+}
+
+// Function that updates the player's guess...
+function updatePlayerguess() {
+    document.getElementById("userGuess").innerHTML = event.key;
 }
 
 function generateComputerLetter() {
@@ -65,12 +62,10 @@ generateComputerLetter();
 document.onkeyup = function (event) {
     // Determines which key was pressed.
     var userGuess = event.key;
-    userGuess = userGuess.toLowerCase();
-  
-    console.log("User Guess " + userGuess);
+    userGuess = userGuess.toUpperCase();
     
-    
-    
+    updatePlayerguess();
+   
 
         if (computerLetter === userGuess) {
             wins++;
@@ -89,9 +84,12 @@ document.onkeyup = function (event) {
             if (numLeft === 0) {
                 lost = lost + 1;
                 updateLost();
-                console.log("Lost", lost);
-                console.log("you suck");
-
+                numLeft = numLeft + 10;
+                updateRemaining();
+                numUsed = 0;
+                updateUsed();
+                generateComputerLetter();
+                console.log("Lost", lost); 
             }
         }
 

@@ -6,78 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    <link href="https://fonts.googleapis.com/css?family=Amiri" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
     <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
 
-<!-- 
-2. You're going to make a game just like the one in the video. Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. Put the following text on your page:
+    <div>
+        <h2><span id="userGuess"></span></h2>
+    </div>
 
-3. Guess what letter I'm thinking of
-
-4. Wins: (# of times the user has guessed the letter correctly)
-
-5. Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
-
-6. Guesses Left: (# of guesses left. This will update)
-
-7. Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
-
-8. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
-
-9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).     -->
-
-
-
-
-<div class="row">
     <div>
         <h1>Guess what letter I'm thinking of?</h1>
     </div>
-</div>
 
-<div class="row">
-<div class="column-md-5"></div>
     <div class="container"> 
+                
+        <p>
+            Wins!<h3><span id="wins">0</span></h3>
+        </p>
         
-        <div class="column-md-2">
-            <ul class="list-group">
-                  
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Wins!
-                    <span class="badge badge-primary badge-pill"><h3><span id="wins">
-                        0</span></h3>
-                </li>
-                
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Losses..
-                    <span class="badge badge-primary badge-pill"><h3><span id="lost">
-                        0</span></h3>
-                </li>
-            
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Guesses left
-                    <span class="badge badge-primary badge-pill"><h3><span id="numLeft">
-                        10</span></h3>
-                </li>
-                
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Guesses so far
-                    <span class="badge badge-primary badge-pill"><h3><span id="numUsed">
-                        0</span></h3>
-                </li>
-
-            </ul>
-        </div>
+        <p>
+            Losses..
+            <h3><span id="lost">
+                0</span></h3>
+            </p>
+    
+        <p>
+            Guesses left
+            <h3><span id="numLeft">
+                10</span></h3>
+            </p>
+ 
+        <p>
+            Guesses so far
+            <h3><span id="numUsed">
+                0</span></h3>
+            </p>
 
     </div>
-</div>
+
+
 
 </body>
-
-
 
 </html>
