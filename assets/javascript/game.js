@@ -9,7 +9,7 @@ var wins = 0;
 
 var lost = 0;
 
-var numGuessed = 0;
+var numUsed = 0;
 
 var numLeft = 10;
 
@@ -33,6 +33,16 @@ function updateWins() {
     document.getElementById("wins").innerHTML = "Wins: " + wins;
 }
 
+// Function that updates the remaining guesses...
+function updateRemaining() {
+    document.getElementById("numLeft").innerHTML = "Guesses Left: " + numLeft;
+}
+
+// Function that updates the number of guesses made...
+function updateUsed() {
+    document.getElementById("numUsed").innerHTML = "Guesses Made: " + numUsed;
+}
+
 // Function that updates the losses...
 function updateLost() {
     document.getElementById("lost").innerHTML = "Losses: " + lost;
@@ -40,10 +50,10 @@ function updateLost() {
 
 function generateComputerLetter() {
     computerLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
-    console.log("Computer " + computerLetter)
+    console.log("Computer " + computerLetter);
 
 }
-generateComputerLetter()
+generateComputerLetter();
 
 
 // MAIN PROCESS
@@ -57,25 +67,25 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
     userGuess = userGuess.toLowerCase();
   
-    console.log("User Guess " + userGuess)
-    // Computer Randomly chooses
+    console.log("User Guess " + userGuess);
     
-    numLeft--
-    // Alerts the user the user pressed (userGuess).
-    //alert("User guess: " + userGuess);
-
-    // Alerts the computer's guess.
-    //alert("computer guess: " + Computer);
     
-
+    numLeft--;
 
         if (computerLetter === userGuess) {
-            wins++
-            console.log("Wins", wins)
+            wins++;
+            console.log("Wins", wins);
             numLeft = 10;
             updateWins();
-        } else if (computerLetter !== userGuess) {
-            numLeft--
+            numUsed = 0;
+            lost = 0;
+        } else {
+            lost++;
+            updateRemaining();
+            numUsed++;
+            if (numLeft === 0) {
+                console.log("you suck");
+            }
         }
 
             // Lost--;
