@@ -31,11 +31,11 @@
 9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).     -->
 
 
-<h1>Guess what letter I'm thinking of?</h1>
+
 
 <div class="row">
-    <div class="userGuess">User Guess:
-        <input type="text" name="guess">
+    <div>
+        <h1>Guess what letter I'm thinking of?</h1>
     </div>
 </div>
 
@@ -45,8 +45,7 @@
         
         <div class="column-md-2">
             <ul class="list-group">
-                
-                
+                  
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Wins!
                     <span class="badge badge-primary badge-pill"><h3><span id="wins">
@@ -55,21 +54,22 @@
                 
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Losses..
-                    <span class="badge badge-primary badge-pill"><h3></span id="lost">
+                    <span class="badge badge-primary badge-pill"><h3><span id="lost">
                         0</span></h3>
                 </li>
             
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Guesses left
-                    <span class="badge badge-primary badge-pill"><h3></span id="numLeft">
+                    <span class="badge badge-primary badge-pill"><h3><span id="numLeft">
                         10</span></h3>
                 </li>
                 
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Guesses so far
-                    <span class="badge badge-primary badge-pill"><h3></span id="numUsed">
+                    <span class="badge badge-primary badge-pill"><h3><span id="numUsed">
                         0</span></h3>
                 </li>
+
             </ul>
         </div>
 

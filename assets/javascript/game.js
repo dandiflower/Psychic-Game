@@ -33,7 +33,7 @@ function updateWins() {
     document.getElementById("wins").innerHTML = "Wins: " + wins;
 }
 
-// Function that updates the remaining guesses...
+// // Function that updates the remaining guesses...
 function updateRemaining() {
     document.getElementById("numLeft").innerHTML = "Guesses Left: " + numLeft;
 }
@@ -70,7 +70,7 @@ document.onkeyup = function (event) {
     console.log("User Guess " + userGuess);
     
     
-    numLeft--;
+    
 
         if (computerLetter === userGuess) {
             wins++;
@@ -80,17 +80,21 @@ document.onkeyup = function (event) {
             numUsed = 0;
             lost = 0;
         } else {
-            lost++;
+            numLeft = numLeft - 1;
             updateRemaining();
-            numUsed++;
+            console.log(numLeft);
+            numUsed = numUsed + 1;
+            updateUsed();
+            console.log(numUsed);
             if (numLeft === 0) {
+                lost = lost + 1;
+                updateLost();
+                console.log("Lost", lost);
                 console.log("you suck");
+
             }
         }
 
-            // Lost--;
-            // console.log("Lost", Lost);
-            // updateWins();
-            // updateLost();
+
         
     };
