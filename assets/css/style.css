@@ -1,11 +1,5 @@
 body {
-    background-color: black;
-}
-
-h3 {
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: springgreen;
+    background-color: rgb(8, 1, 37);
 }
 
 h2 {
@@ -18,9 +12,9 @@ h2 {
 } 
 
 h1 {
-    color: white;
+    color: lightblue;
     text-align: center;
-    font-size: 24px;
+    font-size: 50px;
     font-family: 'Amiri',
     serif;
 }
@@ -30,6 +24,7 @@ h1 {
     margin-left: 45%;
     margin-top: 3%;
     color: salmon;
+    font-size: 16pt;
     font-family: 'Amiri',
     serif;
 }
@@ -40,21 +35,47 @@ h1 {
     margin-left: auto;
 }
 
+#wins {
+    font-size: 24px;
+    color: springgreen;
+}
+
 #numLeft {
+    font-size: 24px;
     color: red;
 }
 
 #numUsed {
+    font-size: 24px;
     color: blue;
 }
 
 #lost {
+    font-size: 24px;
     color: rebeccapurple;
 }
 
-#Wins {
-    color: blueviolet;
-}
+
+@media only screen and (max-width: 800px) {
 
 
+    /* h2 {
+        position: fixed;
+        float: left;
+        bottom: 10%;
+    } */
 
+    .container {
+        position: relative;
+        float: right;
+        margin-right: 5%;
+        margin-top: -20%;
+    }
+
+    h1 {
+        text-align: left;
+        float: left;
+        margin-top: 8%;
+        margin-left: 6%;
+        width: 50%;
+    }
